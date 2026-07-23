@@ -7,24 +7,29 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="14.0" xmlns="http://javafx.com/javafx"
+<VBox alignment="CENTER" spacing="14.0" styleClass="login-bg" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml" fx:controller="lk.saumiz.banking.controller.LoginController">
     <padding>
         <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
     </padding>
 
-    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Smart Banking Management System"/>
-    <Label text="Please sign in to continue"/>
+    <VBox alignment="CENTER" maxWidth="380.0" spacing="18.0" styleClass="login-card">
+        <Label styleClass="brand-title" text="Smart Banking"/>
+        <Label styleClass="brand-subtitle" text="Please sign in to continue"/>
 
-    <VBox maxWidth="320.0" spacing="10.0">
-        <Label text="Username"/>
-        <TextField fx:id="txtUsername" promptText="Enter username"/>
+        <VBox spacing="6.0">
+            <Label styleClass="field-label" text="Username"/>
+            <TextField fx:id="txtUsername" promptText="Enter username"/>
+        </VBox>
 
-        <Label text="Password"/>
-        <PasswordField fx:id="txtPassword" promptText="Enter password"/>
+        <VBox spacing="6.0">
+            <Label styleClass="field-label" text="Password"/>
+            <PasswordField fx:id="txtPassword" promptText="Enter password"/>
+        </VBox>
 
-        <Button fx:id="btnLogin" defaultButton="true" maxWidth="Infinity" onAction="#handleLogin" text="Login"/>
+        <Button fx:id="btnLogin" defaultButton="true" maxWidth="Infinity" onAction="#handleLogin"
+                styleClass="btn-primary" text="Login"/>
 
-        <Label fx:id="lblMessage" style="-fx-text-fill: red;" wrapText="true"/>
+        <Label fx:id="lblMessage" styleClass="msg-error" wrapText="true"/>
     </VBox>
 </VBox>

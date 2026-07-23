@@ -12,41 +12,45 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="14.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+<VBox spacing="16.0" styleClass="root-bg" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
       fx:controller="lk.saumiz.banking.controller.AccountController">
 
-    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Account Management"/>
+    <Label styleClass="section-title" text="Account Management"/>
 
-    <GridPane hgap="10.0" vgap="8.0">
-        <columnConstraints>
-            <ColumnConstraints/>
-            <ColumnConstraints hgrow="ALWAYS"/>
-            <ColumnConstraints/>
-            <ColumnConstraints hgrow="ALWAYS"/>
-        </columnConstraints>
+    <VBox spacing="12.0" styleClass="card">
+        <GridPane hgap="14.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+                <ColumnConstraints/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
 
-        <Label text="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-        <TextField fx:id="txtCustomerId" promptText="e.g. C001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label styleClass="field-label" text="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtCustomerId" promptText="e.g. C001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-        <Label text="Branch ID" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
-        <TextField fx:id="txtBranchId" promptText="e.g. BR001" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+            <Label styleClass="field-label" text="Branch ID" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtBranchId" promptText="e.g. BR001" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
-        <Label text="Account Type" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-        <ChoiceBox fx:id="cbAccountType" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label styleClass="field-label" text="Account Type" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <ChoiceBox fx:id="cbAccountType" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-        <Label text="Opening Balance" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-        <TextField fx:id="txtOpeningBalance" promptText="0.00" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
-    </GridPane>
+            <Label styleClass="field-label" text="Opening Balance" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtOpeningBalance" promptText="0.00" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        </GridPane>
 
-    <HBox spacing="8.0">
-        <Button onAction="#handleCreateAccount" text="Create Account"/>
-        <Button onAction="#handleClear" text="Clear"/>
-    </HBox>
+        <HBox spacing="10.0">
+            <Button onAction="#handleCreateAccount" styleClass="btn-primary" text="Create Account"/>
+            <Button onAction="#handleClear" styleClass="btn-secondary" text="Clear"/>
+        </HBox>
 
-    <HBox spacing="8.0">
+        <Label fx:id="lblMessage" styleClass="msg-info" wrapText="true"/>
+    </VBox>
+
+    <HBox spacing="10.0">
         <TextField fx:id="txtFilterCustomerId" promptText="Filter by Customer ID" HBox.hgrow="ALWAYS"/>
-        <Button onAction="#handleFilterByCustomer" text="Filter"/>
-        <Button onAction="#handleRefresh" text="Show All"/>
+        <Button onAction="#handleFilterByCustomer" styleClass="btn-primary" text="Filter"/>
+        <Button onAction="#handleRefresh" styleClass="btn-secondary" text="Show All"/>
     </HBox>
 
     <TableView fx:id="tblAccounts" VBox.vgrow="ALWAYS">
@@ -59,8 +63,6 @@
             <TableColumn fx:id="colStatus" prefWidth="90.0" text="Status"/>
         </columns>
     </TableView>
-
-    <Label fx:id="lblMessage" wrapText="true"/>
 
     <padding>
         <Insets bottom="10.0" left="0.0" right="0.0" top="0.0"/>
