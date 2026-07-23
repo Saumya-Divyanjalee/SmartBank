@@ -49,7 +49,7 @@ even if something fails mid-operation.
 |---|---|
 | <img width="1127" height="797" alt="Screenshot 2026-07-23 134214" src="https://github.com/user-attachments/assets/1eb73bd7-0b0a-4e97-a6e8-67975ba35a98" />
 |  <img width="1378" height="900" alt="Screenshot 2026-07-23 134226" src="https://github.com/user-attachments/assets/3c1ee2e3-886d-4790-8d79-96c6098949cc" />
- |
+ 
 
  
 
@@ -57,15 +57,9 @@ even if something fails mid-operation.
 |---|---|
 |  <img width="1367" height="908" alt="Screenshot 2026-07-23 134412" src="https://github.com/user-attachments/assets/9717e1fe-17c9-4323-9380-c05fbbc1b133" />
 |<img width="1918" height="1017" alt="Screenshot 2026-07-23 134957" src="https://github.com/user-attachments/assets/bd66b1bc-c53a-491e-96eb-ed97e0a141e1" />
-   |
+   
 
-### Adding Your Own Screenshots
-1. Run the application.
-2. Take a screenshot of each screen (Windows: `Win + Shift + S`).
-3. Save them into a `screenshots/` folder at the project root, using these exact filenames:
-   `login.png`, `dashboard.png`, `customers.png`, `accounts.png`, `transactions.png`, `reports.png`
-4. Commit the folder along with the README — GitHub will render the images automatically.
-
+ 
 ---
 
 ## Tech Stack
@@ -182,26 +176,7 @@ Login with `admin` / the password you chose in step 2.
 - The seed admin password in `schema.sql` is a placeholder by design — you must generate
   your own hash so you actually know the working credentials.
 
-## Common Interview Questions
-
-**Why layered architecture?**
-Separates UI, business rules, and data access so each layer can be tested, maintained, and
-replaced independently.
-
-**Why JDBC transactions for transfer?**
-A transfer touches two account balances and inserts one history row — three separate
-statements. Wrapping them in one transaction with `commit()`/`rollback()` guarantees
-all-or-nothing execution, so a failure partway through can never leave money lost or
-duplicated.
-
-**Why PreparedStatement everywhere?**
-Prevents SQL injection and lets MySQL cache the compiled query plan across executions.
-
-**Why DAO?**
-Keeps SQL out of business logic, so swapping the database later only touches the
-`dao/impl` package.
-
----
+ 
 
 *Built as a portfolio project demonstrating layered architecture, JDBC transaction
 management, and secure banking workflows.*
