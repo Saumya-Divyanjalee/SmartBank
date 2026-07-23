@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="lk.saumiz.banking.controller.DashboardController">
+
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Dashboard"/>
+
+    <GridPane hgap="16.0" vgap="16.0">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="33.3"/>
+            <ColumnConstraints percentWidth="33.3"/>
+            <ColumnConstraints percentWidth="33.3"/>
+        </columnConstraints>
+
+        <VBox style="-fx-background-color: #e0f2fe; -fx-background-radius: 8; -fx-padding: 16;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label text="Total Customers"/>
+            <Label fx:id="lblTotalCustomers" style="-fx-font-size: 26px; -fx-font-weight: bold;" text="0"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #dcfce7; -fx-background-radius: 8; -fx-padding: 16;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <Label text="Total Accounts"/>
+            <Label fx:id="lblTotalAccounts" style="-fx-font-size: 26px; -fx-font-weight: bold;" text="0"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #fef9c3; -fx-background-radius: 8; -fx-padding: 16;" GridPane.columnIndex="2" GridPane.rowIndex="0">
+            <Label text="Bank Balance (Total)"/>
+            <Label fx:id="lblBankBalance" style="-fx-font-size: 26px; -fx-font-weight: bold;" text="0.00"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #fee2e2; -fx-background-radius: 8; -fx-padding: 16;" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Label text="Today's Deposits"/>
+            <Label fx:id="lblTodayDeposits" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="0.00"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #ffedd5; -fx-background-radius: 8; -fx-padding: 16;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label text="Today's Withdrawals"/>
+            <Label fx:id="lblTodayWithdrawals" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="0.00"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #ede9fe; -fx-background-radius: 8; -fx-padding: 16;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label text="Today's Transfers"/>
+            <Label fx:id="lblTodayTransfers" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="0.00"/>
+        </VBox>
+    </GridPane>
+
+    <Label fx:id="lblError" style="-fx-text-fill: red;" wrapText="true"/>
+</VBox>

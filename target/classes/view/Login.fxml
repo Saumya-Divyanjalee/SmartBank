@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="14.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="lk.saumiz.banking.controller.LoginController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+    </padding>
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Smart Banking Management System"/>
+    <Label text="Please sign in to continue"/>
+
+    <VBox maxWidth="320.0" spacing="10.0">
+        <Label text="Username"/>
+        <TextField fx:id="txtUsername" promptText="Enter username"/>
+
+        <Label text="Password"/>
+        <PasswordField fx:id="txtPassword" promptText="Enter password"/>
+
+        <Button fx:id="btnLogin" defaultButton="true" maxWidth="Infinity" onAction="#handleLogin" text="Login"/>
+
+        <Label fx:id="lblMessage" style="-fx-text-fill: red;" wrapText="true"/>
+    </VBox>
+</VBox>

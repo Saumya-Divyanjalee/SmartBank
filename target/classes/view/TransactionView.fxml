@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="lk.saumiz.banking.controller.TransactionController">
+
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Deposit / Withdraw / Transfer"/>
+
+    <TabPane tabClosingPolicy="UNAVAILABLE">
+
+        <Tab text="Deposit">
+            <VBox spacing="10.0">
+                <padding><Insets top="12.0" left="4.0"/></padding>
+                <GridPane hgap="10.0" vgap="8.0">
+                    <columnConstraints>
+                        <ColumnConstraints/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="Account No" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtDepositAccount" promptText="e.g. ACC0001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtDepositAmount" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Label text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtDepositRemarks" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                </GridPane>
+                <Button onAction="#handleDeposit" text="Deposit"/>
+                <Label fx:id="lblDepositMessage" wrapText="true"/>
+            </VBox>
+        </Tab>
+
+        <Tab text="Withdraw">
+            <VBox spacing="10.0">
+                <padding><Insets top="12.0" left="4.0"/></padding>
+                <GridPane hgap="10.0" vgap="8.0">
+                    <columnConstraints>
+                        <ColumnConstraints/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="Account No" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtWithdrawAccount" promptText="e.g. ACC0001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtWithdrawAmount" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Label text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtWithdrawRemarks" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                </GridPane>
+                <Button onAction="#handleWithdraw" text="Withdraw"/>
+                <Label fx:id="lblWithdrawMessage" wrapText="true"/>
+            </VBox>
+        </Tab>
+
+        <Tab text="Transfer">
+            <VBox spacing="10.0">
+                <padding><Insets top="12.0" left="4.0"/></padding>
+                <GridPane hgap="10.0" vgap="8.0">
+                    <columnConstraints>
+                        <ColumnConstraints/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="From Account" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtTransferFrom" promptText="e.g. ACC0001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="To Account" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtTransferTo" promptText="e.g. ACC0002" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtTransferAmount" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <Label text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="txtTransferRemarks" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                </GridPane>
+                <Button onAction="#handleTransfer" text="Transfer"/>
+                <Label fx:id="lblTransferMessage" wrapText="true"/>
+            </VBox>
+        </Tab>
+
+        <Tab text="Transaction History">
+            <VBox spacing="10.0">
+                <padding><Insets top="12.0" left="4.0"/></padding>
+                <HBox spacing="8.0">
+                    <TextField fx:id="txtHistoryAccount" promptText="Account No" HBox.hgrow="ALWAYS"/>
+                    <Button onAction="#handleLoadHistory" text="Load History"/>
+                </HBox>
+                <TableView fx:id="tblHistory" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colTxnId" prefWidth="110.0" text="Txn ID"/>
+                        <TableColumn fx:id="colFrom" prefWidth="90.0" text="From"/>
+                        <TableColumn fx:id="colTo" prefWidth="90.0" text="To"/>
+                        <TableColumn fx:id="colAmount" prefWidth="90.0" text="Amount"/>
+                        <TableColumn fx:id="colType" prefWidth="90.0" text="Type"/>
+                        <TableColumn fx:id="colBalanceAfter" prefWidth="100.0" text="Balance After"/>
+                        <TableColumn fx:id="colDate" prefWidth="140.0" text="Date"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>
