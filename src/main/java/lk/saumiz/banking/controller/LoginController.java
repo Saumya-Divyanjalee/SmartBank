@@ -54,6 +54,7 @@ public class LoginController {
         Parent root = FXMLLoader.load(getClass().getResource("/view/MainView.fxml"));
         Stage stage = (Stage) btnLogin.getScene().getWindow();
         Scene scene = new Scene(root, 1100, 700);
+        scene.getStylesheets().add(getClass().getResource("/view/bank-theme.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle("Smart Banking Management System - Dashboard");
         stage.centerOnScreen();

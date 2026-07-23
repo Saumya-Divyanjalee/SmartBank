@@ -44,7 +44,9 @@ public class MainController {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
             Stage stage = (Stage) contentArea.getScene().getWindow();
-            stage.setScene(new Scene(root, 900, 600));
+            Scene loginScene = new Scene(root, 900, 600);
+            loginScene.getStylesheets().add(getClass().getResource("/view/bank-theme.css").toExternalForm());
+            stage.setScene(loginScene);
             stage.setTitle("Smart Banking Management System");
             stage.centerOnScreen();
         } catch (Exception e) {

@@ -13,6 +13,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
         Scene scene = new Scene(root, 900, 600);
+        scene.getStylesheets().add(getClass().getResource("/view/bank-theme.css").toExternalForm());
+
         primaryStage.setScene(scene);
         primaryStage.setTitle("Smart Banking Management System");
         primaryStage.setResizable(true);

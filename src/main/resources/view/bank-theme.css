@@ -1,0 +1,210 @@
+/* ===== Smart Banking - Premium White & Orange Theme ===== */
+
+.root-bg {
+    -fx-background-color: #FAFAFA;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Login Screen ---------- */
+.login-bg {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #FFF3E6);
+}
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(230,126,34,0.25), 30, 0.2, 0, 8);
+    -fx-border-color: #F0D9BE;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+}
+.brand-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C2600D;
+}
+.brand-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #8A6D3B;
+}
+
+/* ---------- Top Bar ---------- */
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #C2600D, #F2994A);
+    -fx-padding: 14 20 14 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 2);
+}
+.top-bar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.top-bar-user {
+    -fx-text-fill: #FFE8CC;
+    -fx-font-size: 12px;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    -fx-background-color: white;
+    -fx-padding: 18 12 18 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 2, 0);
+}
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4A4A4A;
+    -fx-font-size: 13px;
+    -fx-padding: 12 14 12 14;
+    -fx-background-radius: 8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+.nav-button:hover {
+    -fx-background-color: #FFF0DE;
+    -fx-text-fill: #C2600D;
+}
+
+/* ---------- Cards / Panels ---------- */
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C2C2C;
+}
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 12, 0, 0, 3);
+}
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 18;
+    -fx-border-color: #F2994A;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 2);
+}
+.stat-label {
+    -fx-text-fill: #8A6D3B;
+    -fx-font-size: 12px;
+}
+.stat-value {
+    -fx-text-fill: #C2600D;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+/* ---------- Inputs ---------- */
+.text-field, .password-field, .choice-box, .combo-box {
+    -fx-background-color: #FAFAFA;
+    -fx-background-radius: 8;
+    -fx-border-color: #E0C9A6;
+    -fx-border-radius: 8;
+    -fx-padding: 8 10 8 10;
+    -fx-font-size: 13px;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #F2994A;
+    -fx-background-color: white;
+}
+.field-label {
+    -fx-text-fill: #5A5A5A;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+    -fx-background-color: linear-gradient(to right, #C2600D, #F2994A);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-padding: 10 22 10 22;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(194,96,13,0.35), 8, 0, 0, 2);
+}
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to right, #A8530A, #E88A38);
+}
+.btn-secondary {
+    -fx-background-color: white;
+    -fx-text-fill: #C2600D;
+    -fx-border-color: #F2994A;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+    -fx-padding: 9 20 9 20;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover {
+    -fx-background-color: #FFF3E6;
+}
+.btn-danger {
+    -fx-background-color: white;
+    -fx-text-fill: #C0392B;
+    -fx-border-color: #C0392B;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+    -fx-padding: 9 20 9 20;
+    -fx-cursor: hand;
+}
+.btn-danger:hover {
+    -fx-background-color: #FDECEA;
+}
+
+/* ---------- Table ---------- */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #F0E0CC;
+    -fx-border-radius: 10;
+}
+.table-view .column-header-background {
+    -fx-background-color: #FFF3E6;
+    -fx-background-radius: 10 10 0 0;
+}
+.table-view .column-header-background .label {
+    -fx-text-fill: #C2600D;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+.table-row-cell {
+    -fx-background-color: white;
+}
+.table-row-cell:odd {
+    -fx-background-color: #FFFAF3;
+}
+.table-row-cell:selected {
+    -fx-background-color: #FFE0B2;
+}
+
+/* ---------- Tabs ---------- */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+.tab-pane .tab {
+    -fx-background-color: #FFF3E6;
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 8 16 8 16;
+}
+.tab-pane .tab:selected {
+    -fx-background-color: linear-gradient(to right, #C2600D, #F2994A);
+}
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.tab-pane .tab-label {
+    -fx-text-fill: #C2600D;
+    -fx-font-size: 13px;
+}
+
+/* ---------- Messages ---------- */
+.msg-success { -fx-text-fill: #1E8449; -fx-font-size: 12px; }
+.msg-error   { -fx-text-fill: #C0392B; -fx-font-size: 12px; }
+.msg-info    { -fx-text-fill: #8A6D3B; -fx-font-size: 12px; }
