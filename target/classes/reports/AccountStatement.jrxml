@@ -53,7 +53,7 @@
     <columnHeader>
         <band height="20">
             <staticText>
-                <reportElement x="0" y="0" width="90" height="20" style="header"/>
+                <reportElement x="0" y="0" width="90" height="20"/>
                 <text><![CDATA[Txn ID]]></text>
             </staticText>
             <staticText>
