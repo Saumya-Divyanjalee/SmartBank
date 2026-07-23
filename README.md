@@ -16,9 +16,7 @@ a live dashboard, and PDF account statements via JasperReports.
 
 **Author:** [Saumya Divyanjalee](https://github.com/Saumya-Divyanjalee) · **Repository:** [github.com/Saumya-Divyanjalee/SmartBank](https://github.com/Saumya-Divyanjalee/SmartBank)
 
-<p align="center">
-  <img src="screenshots/login.png" alt="Login Screen" width="700"/>
-</p>
+ 
 
 ---
 
@@ -45,20 +43,21 @@ even if something fails mid-operation.
 
 ## Screenshots
 
-> Replace the placeholder images in the `/screenshots` folder with your own — see
-> [Adding Your Own Screenshots](#adding-your-own-screenshots) below.
+ 
 
 | Login | Dashboard |
 |---|---|
-| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) |
+| <img width="1127" height="797" alt="Screenshot 2026-07-23 134214" src="https://github.com/user-attachments/assets/1eb73bd7-0b0a-4e97-a6e8-67975ba35a98" />
+|  <img width="1378" height="900" alt="Screenshot 2026-07-23 134226" src="https://github.com/user-attachments/assets/3c1ee2e3-886d-4790-8d79-96c6098949cc" />
+ |
 
-| Customer Management | Account Management |
-|---|---|
-| ![Customers](screenshots/customers.png) | ![Accounts](screenshots/accounts.png) |
+ 
 
 | Deposit / Withdraw / Transfer | Reports |
 |---|---|
-| ![Transactions](screenshots/transactions.png) | ![Reports](screenshots/reports.png) |
+|  <img width="1367" height="908" alt="Screenshot 2026-07-23 134412" src="https://github.com/user-attachments/assets/9717e1fe-17c9-4323-9380-c05fbbc1b133" />
+|<img width="1918" height="1017" alt="Screenshot 2026-07-23 134957" src="https://github.com/user-attachments/assets/bd66b1bc-c53a-491e-96eb-ed97e0a141e1" />
+   |
 
 ### Adding Your Own Screenshots
 1. Run the application.
