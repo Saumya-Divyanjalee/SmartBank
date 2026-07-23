@@ -11,49 +11,53 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="14.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+<VBox spacing="16.0" styleClass="root-bg" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
       fx:controller="lk.saumiz.banking.controller.CustomerController">
 
-    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Customer Management"/>
+    <Label styleClass="section-title" text="Customer Management"/>
 
-    <GridPane hgap="10.0" vgap="8.0">
-        <columnConstraints>
-            <ColumnConstraints/>
-            <ColumnConstraints hgrow="ALWAYS"/>
-            <ColumnConstraints/>
-            <ColumnConstraints hgrow="ALWAYS"/>
-        </columnConstraints>
+    <VBox spacing="12.0" styleClass="card">
+        <GridPane hgap="14.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+                <ColumnConstraints/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
 
-        <Label text="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-        <TextField fx:id="txtCustomerId" editable="false" promptText="auto-generated" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label styleClass="field-label" text="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtCustomerId" editable="false" promptText="auto-generated" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-        <Label text="Name" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
-        <TextField fx:id="txtName" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+            <Label styleClass="field-label" text="Name" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtName" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
-        <Label text="NIC" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-        <TextField fx:id="txtNic" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label styleClass="field-label" text="NIC" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtNic" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-        <Label text="Phone" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-        <TextField fx:id="txtPhone" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+            <Label styleClass="field-label" text="Phone" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtPhone" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
 
-        <Label text="Address" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-        <TextField fx:id="txtAddress" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label styleClass="field-label" text="Address" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtAddress" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-        <Label text="Email" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
-        <TextField fx:id="txtEmail" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
-    </GridPane>
+            <Label styleClass="field-label" text="Email" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtEmail" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        </GridPane>
 
-    <HBox spacing="8.0">
-        <Button onAction="#handleAdd" text="Add"/>
-        <Button onAction="#handleUpdate" text="Update"/>
-        <Button onAction="#handleDelete" text="Delete"/>
-        <Button onAction="#handleClear" text="Clear"/>
-    </HBox>
+        <HBox spacing="10.0">
+            <Button onAction="#handleAdd" styleClass="btn-primary" text="Add"/>
+            <Button onAction="#handleUpdate" styleClass="btn-secondary" text="Update"/>
+            <Button onAction="#handleDelete" styleClass="btn-danger" text="Delete"/>
+            <Button onAction="#handleClear" styleClass="btn-secondary" text="Clear"/>
+        </HBox>
 
-    <HBox spacing="8.0">
+        <Label fx:id="lblMessage" styleClass="msg-info" wrapText="true"/>
+    </VBox>
+
+    <HBox spacing="10.0">
         <TextField fx:id="txtSearch" promptText="Search by name, NIC, phone or ID" HBox.hgrow="ALWAYS"/>
-        <Button onAction="#handleSearch" text="Search"/>
-        <Button onAction="#handleRefresh" text="Show All"/>
+        <Button onAction="#handleSearch" styleClass="btn-primary" text="Search"/>
+        <Button onAction="#handleRefresh" styleClass="btn-secondary" text="Show All"/>
     </HBox>
 
     <TableView fx:id="tblCustomers" VBox.vgrow="ALWAYS">
@@ -66,8 +70,6 @@
             <TableColumn fx:id="colEmail" prefWidth="160.0" text="Email"/>
         </columns>
     </TableView>
-
-    <Label fx:id="lblMessage" wrapText="true"/>
 
     <padding>
         <Insets bottom="10.0" left="0.0" right="0.0" top="0.0"/>

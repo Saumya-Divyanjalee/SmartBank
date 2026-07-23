@@ -7,88 +7,87 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="10.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+<VBox spacing="14.0" styleClass="root-bg" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
       fx:controller="lk.saumiz.banking.controller.TransactionController">
 
-    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Deposit / Withdraw / Transfer"/>
+    <Label styleClass="section-title" text="Deposit / Withdraw / Transfer"/>
 
     <TabPane tabClosingPolicy="UNAVAILABLE">
 
         <Tab text="Deposit">
-            <VBox spacing="10.0">
-                <padding><Insets top="12.0" left="4.0"/></padding>
-                <GridPane hgap="10.0" vgap="8.0">
+            <VBox spacing="14.0" styleClass="card">
+                <padding><Insets top="16.0" left="4.0" bottom="4.0" right="4.0"/></padding>
+                <GridPane hgap="14.0" vgap="10.0">
                     <columnConstraints>
                         <ColumnConstraints/>
                         <ColumnConstraints hgrow="ALWAYS"/>
                     </columnConstraints>
-                    <Label text="Account No" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label styleClass="field-label" text="Account No" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
                     <TextField fx:id="txtDepositAccount" promptText="e.g. ACC0001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-                    <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Label styleClass="field-label" text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
                     <TextField fx:id="txtDepositAmount" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                    <Label text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <Label styleClass="field-label" text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
                     <TextField fx:id="txtDepositRemarks" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                 </GridPane>
-                <Button onAction="#handleDeposit" text="Deposit"/>
-                <Label fx:id="lblDepositMessage" wrapText="true"/>
+                <Button onAction="#handleDeposit" styleClass="btn-primary" text="Deposit"/>
+                <Label fx:id="lblDepositMessage" styleClass="msg-info" wrapText="true"/>
             </VBox>
         </Tab>
 
         <Tab text="Withdraw">
-            <VBox spacing="10.0">
-                <padding><Insets top="12.0" left="4.0"/></padding>
-                <GridPane hgap="10.0" vgap="8.0">
+            <VBox spacing="14.0" styleClass="card">
+                <padding><Insets top="16.0" left="4.0" bottom="4.0" right="4.0"/></padding>
+                <GridPane hgap="14.0" vgap="10.0">
                     <columnConstraints>
                         <ColumnConstraints/>
                         <ColumnConstraints hgrow="ALWAYS"/>
                     </columnConstraints>
-                    <Label text="Account No" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label styleClass="field-label" text="Account No" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
                     <TextField fx:id="txtWithdrawAccount" promptText="e.g. ACC0001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-                    <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Label styleClass="field-label" text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
                     <TextField fx:id="txtWithdrawAmount" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                    <Label text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <Label styleClass="field-label" text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
                     <TextField fx:id="txtWithdrawRemarks" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                 </GridPane>
-                <Button onAction="#handleWithdraw" text="Withdraw"/>
-                <Label fx:id="lblWithdrawMessage" wrapText="true"/>
+                <Button onAction="#handleWithdraw" styleClass="btn-primary" text="Withdraw"/>
+                <Label fx:id="lblWithdrawMessage" styleClass="msg-info" wrapText="true"/>
             </VBox>
         </Tab>
 
         <Tab text="Transfer">
-            <VBox spacing="10.0">
-                <padding><Insets top="12.0" left="4.0"/></padding>
-                <GridPane hgap="10.0" vgap="8.0">
+            <VBox spacing="14.0" styleClass="card">
+                <padding><Insets top="16.0" left="4.0" bottom="4.0" right="4.0"/></padding>
+                <GridPane hgap="14.0" vgap="10.0">
                     <columnConstraints>
                         <ColumnConstraints/>
                         <ColumnConstraints hgrow="ALWAYS"/>
                     </columnConstraints>
-                    <Label text="From Account" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label styleClass="field-label" text="From Account" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
                     <TextField fx:id="txtTransferFrom" promptText="e.g. ACC0001" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-                    <Label text="To Account" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Label styleClass="field-label" text="To Account" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
                     <TextField fx:id="txtTransferTo" promptText="e.g. ACC0002" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                    <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <Label styleClass="field-label" text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
                     <TextField fx:id="txtTransferAmount" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                    <Label text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <Label styleClass="field-label" text="Remarks" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
                     <TextField fx:id="txtTransferRemarks" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
                 </GridPane>
-                <Button onAction="#handleTransfer" text="Transfer"/>
-                <Label fx:id="lblTransferMessage" wrapText="true"/>
+                <Button onAction="#handleTransfer" styleClass="btn-primary" text="Transfer"/>
+                <Label fx:id="lblTransferMessage" styleClass="msg-info" wrapText="true"/>
             </VBox>
         </Tab>
 
         <Tab text="Transaction History">
-            <VBox spacing="10.0">
-                <padding><Insets top="12.0" left="4.0"/></padding>
-                <HBox spacing="8.0">
+            <VBox spacing="14.0" styleClass="card">
+                <padding><Insets top="16.0" left="4.0" bottom="4.0" right="4.0"/></padding>
+                <HBox spacing="10.0">
                     <TextField fx:id="txtHistoryAccount" promptText="Account No" HBox.hgrow="ALWAYS"/>
-                    <Button onAction="#handleLoadHistory" text="Load History"/>
+                    <Button onAction="#handleLoadHistory" styleClass="btn-primary" text="Load History"/>
                 </HBox>
                 <TableView fx:id="tblHistory" VBox.vgrow="ALWAYS">
                     <columns>
